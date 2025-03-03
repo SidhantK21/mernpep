@@ -8,7 +8,7 @@ const HospitalDetails = () => {
   const [hospital, setHospital] = useState(null);
 
   useEffect(() => {
-    axios.get(`https://mernpeph.onrender.com/api/v1/hospitals?id=${id}`).then((res) => setHospital(res.data));
+    axios.get(`https://mernpep.onrender.com/api/v1/hospitals?id=${id}`).then((res) => setHospital(res.data));
   }, [id]);
 
   if (!hospital) return <p>Loading...</p>;

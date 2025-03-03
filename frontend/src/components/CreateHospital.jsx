@@ -41,7 +41,7 @@ const HospitalForm = () => {
   const handleSubmit = async (e) => {
     e.preventDefault();
     try {
-      const res = await axios.post('https://mernpeph.onrender.com/api/v1/hospitals/create', formData);
+      const res = await axios.post('https://mernpep.onrender.com/api/v1/hospitals/create', formData);
       alert('Hospital created successfully!');
       navigate('/hospitals'); // Redirect to hospitals list
     } catch (error) {
