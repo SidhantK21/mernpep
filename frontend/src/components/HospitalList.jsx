@@ -8,7 +8,7 @@ const HospitalList = () => {
 
   const fetchHospitals = async () => {
     try {
-      const res = await axios.get(`http://localhost:5001/api/v1/hospitals?city=${city}`);
+      const res = await axios.get(`https://mernpeph.onrender.com/api/v1/hospitals?city=${city}`);
       setHospitals(res.data);
     } catch (error) {
       console.error(error);
@@ -17,7 +17,7 @@ const HospitalList = () => {
 
   const handleDelete = async (id) => {
     try {
-      await axios.delete(`http://localhost:5001/api/v1/hospitals/delete?id=${id}`);
+      await axios.delete(`https://mernpeph.onrender.com/api/v1/hospitals/delete?id=${id}`);
       alert('Hospital deleted successfully!');
       fetchHospitals(); // Refresh the list
     } catch (error) {

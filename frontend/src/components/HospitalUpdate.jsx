@@ -23,7 +23,7 @@ const UpdateHospital = () => {
     const fetchHospital = async () => {
       try {
         console.log('Fetching hospital with ID:', id); // Debugging
-        const res = await axios.get(`http://localhost:5001/api/v1/hospitals?id=${id}`);
+        const res = await axios.get(`https://mernpeph.onrender.com/api/v1/hospitals?id=${id}`);
         console.log('Fetched hospital data:', res.data); // Debugging
         setFormData(res.data);
       } catch (error) {
@@ -56,7 +56,7 @@ const UpdateHospital = () => {
     e.preventDefault();
     try {
       console.log('Updating hospital with ID:', id); // Debugging
-      const res = await axios.put(`http://localhost:5001/api/v1/hospitals/update/${id}`, formData);
+      const res = await axios.put(`https://mernpeph.onrender.com/api/v1/hospitals/update/${id}`, formData);
       console.log('Update response:', res.data); // Debugging
       alert('Hospital updated successfully!');
       navigate('/hospitals');

@@ -8,7 +8,7 @@ const EditHospital = () => {
   const [formData, setFormData] = useState({});
 
   useEffect(() => {
-    axios.get(`http://localhost:5001/api/v1/hospitals?id=${id}`).then((res) => setFormData(res.data));
+    axios.get(`https://mernpeph.onrender.com/api/v1/hospitals?id=${id}`).then((res) => setFormData(res.data));
   }, [id]);
 
   const handleChange = (e) => {
